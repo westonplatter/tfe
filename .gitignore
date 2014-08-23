@@ -1,0 +1,6 @@
+/.bundle
+/log/*.log
+/tmp
+
+database.yml
+secrets.yml

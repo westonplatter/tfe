@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140824041034) do
+ActiveRecord::Schema.define(version: 20140824173218) do
 
   create_table "downloads", force: true do |t|
     t.datetime "downloaded_at"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20140824041034) do
     t.string   "file_extension"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "keywords", force: true do |t|
+    t.integer  "age"
+    t.string   "sex"
+    t.string   "user_category"
+    t.integer  "download_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "word"
   end
 
   create_table "uploads", force: true do |t|

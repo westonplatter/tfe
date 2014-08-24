@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'annotate'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.0.0'
@@ -20,6 +19,10 @@ gem 'simple_form'
 gem 'state_machine'
 gem 'uglifier'
 gem 'unicorn-rails'
+
+gem 'annotate', 
+  github: 'ctran/annotate_models', 
+  branch: 'master'
 
 gem 'ransack', 
   github: 'activerecord-hackery/ransack', 

@@ -1,0 +1,22 @@
+<p>
+	Uploaded Files
+	<ul>
+		<% @uploads.each do |upload| %>
+			<li><%= upload.filename %></li>
+		<% end %>
+	</ul>
+</p>
+
+<p>Number of records: <%= @count %></p>
+
+<br>
+
+<p>
+Import a Download File
+<%= form_tag send_upload_path, method: :post, multipart: true do %>
+  <%= file_field_tag :file %>
+  <br>
+  <br>
+  <%= submit_tag "Import" %>
+<% end %>	
+</p>

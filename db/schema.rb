@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140824204425) do
+ActiveRecord::Schema.define(version: 20140824213024) do
+
+  create_table "calls", force: true do |t|
+    t.datetime "call_time"
+    t.string   "number"
+    t.string   "label"
+    t.string   "from_city"
+    t.string   "from_state"
+    t.decimal  "minutes",    precision: 10, scale: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "downloads", force: true do |t|
     t.datetime "downloaded_at"
@@ -55,6 +66,7 @@ ActiveRecord::Schema.define(version: 20140824204425) do
     t.string   "filename"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "kind"
   end
 
 end

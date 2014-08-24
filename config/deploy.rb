@@ -74,6 +74,6 @@ set :keep_releases, 5
   namespace :deploy do
     task :restart do 
       invoke 'unicorn:legacy_restart'
-      invoke 'resque:restart'
+      # invoke 'resque:restart'
     end
   end

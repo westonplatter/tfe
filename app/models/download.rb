@@ -39,6 +39,8 @@ class Download < ActiveRecord::Base
 			k.download_id = self.id
 
 			k.word = w
+
+			k.country_name = self.country_name
 			
 			age = w.gsub(/\D/, '')
 			unless age.empty?

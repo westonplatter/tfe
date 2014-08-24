@@ -20,6 +20,7 @@ set :use_sudo, true
 set :linked_files, %w{
   config/application.yml
   config/database.yml
+  config/secrets.yml
 }
 
 set :linked_dirs, %w{
@@ -58,6 +59,7 @@ set :keep_releases, 5
         on roles(:web, :app), in: :sequence, wait: 4 do
           upload! 'config/database.yml', "#{deploy_to}/shared/config/database.yml"
           upload! 'config/application.yml', "#{deploy_to}/shared/config/application.yml"
+          upload! 'config/secrets.yml', "#{deploy_to}/shared/config/secrets.yml"
         end    
       end
       

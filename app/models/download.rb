@@ -85,6 +85,9 @@ end
 #
 # Indexes
 #
-#  index_downloads_on_country_name  (country_name)
-#  index_downloads_on_ip_address    (ip_address)
+#  index_downloads_on_city                         (city)
+#  index_downloads_on_country_name                 (country_name)
+#  index_downloads_on_country_name_and_city        (country_name,city)
+#  index_downloads_on_ip_address                   (ip_address)
+#  index_downloads_on_ip_address_and_country_name  (ip_address,country_name)
 #

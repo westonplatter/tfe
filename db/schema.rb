@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140824201049) do
+ActiveRecord::Schema.define(version: 20140824204425) do
 
   create_table "downloads", force: true do |t|
     t.datetime "downloaded_at"
@@ -30,7 +30,10 @@ ActiveRecord::Schema.define(version: 20140824201049) do
     t.datetime "updated_at"
   end
 
+  add_index "downloads", ["city"], name: "index_downloads_on_city", using: :btree
+  add_index "downloads", ["country_name", "city"], name: "index_downloads_on_country_name_and_city", using: :btree
   add_index "downloads", ["country_name"], name: "index_downloads_on_country_name", using: :btree
+  add_index "downloads", ["ip_address", "country_name"], name: "index_downloads_on_ip_address_and_country_name", using: :btree
   add_index "downloads", ["ip_address"], name: "index_downloads_on_ip_address", using: :btree
 
   create_table "keywords", force: true do |t|

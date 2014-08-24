@@ -9,8 +9,7 @@ class Download < ActiveRecord::Base
       next if row.empty?
       
       hash = row_to_hash(row)
-      download = where(username: hash[:username], downloaded_at: hash[:downloaded_at]).first
-      create(hash) if download.nil?
+      create(hash)
     end
 	end
 

@@ -45,7 +45,7 @@ set :keep_releases, 5
 
   set :resque_environment_task,   -> { true }
   set :rails_env,                 -> { fetch(:stage) }
-  set :resque_kill_signal,        -> { "QUIT" }
+  set :resque_kill_signal,        -> { "USR2" }
   set :scheduler_kill_signal,     -> { "KILL" }
   set :resque_log_file,           -> { "#{shared_path}/log" }
   

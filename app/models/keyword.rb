@@ -16,3 +16,9 @@ end
 #  word          :string(255)
 #  country_name  :string(255)
 #
+# Indexes
+#
+#  index_keywords_on_country_name  (country_name)
+#  index_keywords_on_download_id   (download_id)
+#  index_keywords_on_word          (word)
+#

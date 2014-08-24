@@ -83,3 +83,8 @@ end
 #  created_at     :datetime
 #  updated_at     :datetime
 #
+# Indexes
+#
+#  index_downloads_on_country_name  (country_name)
+#  index_downloads_on_ip_address    (ip_address)
+#

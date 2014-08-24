@@ -14,4 +14,5 @@ end
 #  created_at    :datetime
 #  updated_at    :datetime
 #  word          :string(255)
+#  country_name  :string(255)
 #
